@@ -33,5 +33,5 @@ Bu araç **Nmap’in yerine geçmez** ve gerçek sistemlere zarar vermek için t
 - Eğitim modu (aç / kapat)
 - Görev modu (öğrenmeyi pekiştirir)
 
-- 
+  
 <img width="891" height="765" alt="Ekran görüntüsü 2026-02-06 211456" src="https://github.com/user-attachments/assets/3f23dd52-9e40-4cad-8dbc-2c197689f074" />
