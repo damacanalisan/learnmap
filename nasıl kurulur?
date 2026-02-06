@@ -1,0 +1,7 @@
+ilk öncelikle aşağıdaki linki linux terminaline yapıştırıyoruz
+git clone https://github.com/damacanalisan/learnmap.git
+
+ardından terminale "cd learnmap" yazıyoruz
+son olarakta 
+chmod +x learnmap.py yazıyoruz 
+artık girmek istediğimizde cd learnmap yazıp learnmap.py yazmamız yeterli.
