@@ -49,10 +49,8 @@ TCP Connect taraması hedef: 192.168.1.5
 
 Menü ve tarama çıktısı örnekleri:
 
-![Menü örneği](images/screenshot_menu.svg)
-
-![Tarama sonuç örneği](images/screenshot_results.svg)
-
+![Menü örneği](<img width="890" height="825" alt="Ekran görüntüsü 2026-02-12 013018" src="https://github.com/user-attachments/assets/1f23ac55-a757-4e3c-991f-b0658dd54262" />
+)
 
 ## Güvenlik ve Etik
 
