@@ -1,40 +1,58 @@
-# LearnMap 👁️  
-### Learn Nmap the Right Way
+# LearnMap
 
-**LearnMap**, Nmap’i yeni öğrenenler için geliştirilmiş **eğitim amaçlı** bir terminal aracıdır.  
-Amaç; Nmap komutlarını ezberletmek değil, **tarama mantığını anlayarak** öğretmektir.
+LearnMap — öğretici amaçlı bir `nmap` yardımcı aracıdır. Menülü bir CLI sunar, kullanıcıya nmap komutlarını öğretir, örnekleri gösterir ve onayla gerçek tarama çalıştırır; sistemde `nmap` yoksa Python tabanlı bir fallback taraması (TCP connect, UDP approx, ping) sunar.
 
-Bu proje özellikle:
-- Öğrenciler
-- Yeni başlayanlar
-- Siber güvenliğe giriş yapanlar
+## Özellikler
 
-için hazırlanmıştır.
+- Menü tabanlı, iç içe (kategori → seçenek) arayüz.
+- Tüm yaygın `nmap` tarama tipleri ve önemli flag'ler listelenir.
+- Seçilen işlemin `nmap` karşılığı gösterilir (örnek komut).
+- Kullanıcı onayıyla `nmap` çalıştırma; çıktı canlı gösterilir ve dosyaya kaydedilebilir.
+- Eğer `nmap` yüklü değilse Python fallback (TCP connect, UDP, ping) ile tarama yapılır.
+- Güvenlik/etik uyarısı ve çalıştırma için açık onay (`RUN`) gerektirir.
 
----
+## Gereksinimler
 
-## 🎯 Amaç
-LearnMap, Nmap’in çalışma mantığını:
-- Menü tabanlı
-- Görev odaklı (Task Mode)
-- Açıklamalı (Education Mode)
-- Görsel (ASCII banner)
+- Python 3.8+
+- (Opsiyonel) `nmap` yüklü ise tam özellik çalışır. Windows için [Nmap indir](https://nmap.org/download.html).
 
-bir şekilde öğretmeyi hedefler.
+## Hızlı Başlangıç
 
-Bu araç **Nmap’in yerine geçmez** ve gerçek sistemlere zarar vermek için tasarlanmamıştır.
+1. Depoyu klonla veya bu dizine dosyaları koy:
 
----
+```bash
+python learnmap.py
+```
 
-## 🧠 Özellikler
-- Yaygın port taraması (eğitimsel)
-- Host ayakta mı kontrolü
-- Yavaş / sessiz tarama mantığı
-- Eğitim modu (aç / kapat)
-- Görev modu (öğrenmeyi pekiştirir)
+2. Menüde seçim yapın: örn `6` → Tarama Türleri → `1` (SYN Stealth) → hedef girin → çalıştırma onayı. Eğer sisteminizde `nmap` yoksa program fallback teklif eder.
 
-  
-<img width="891" height="765" alt="Ekran görüntüsü 2026-02-06 211456" src="https://github.com/user-attachments/assets/3f23dd52-9e40-4cad-8dbc-2c197689f074" />
+## Örnek Kullanım
 
-📄 License
-This project is licensed under the MIT License
+- `nmap` mevcutsa program şu gibi bir komut gösterir:
+
+```
+nmap -sS -p 22,80 192.168.1.5
+```
+
+- Çalıştırmak isterseniz `RUN` yazıp onaylayın; sonra çıktı canlı gelir. Dosyaya kaydetmek isterseniz `-oN/-oX/-oG/-oA` formatlarından birini seçebilirsiniz.
+
+- `nmap` yoksa program şöyle bir fallback çalıştırır (örnek):
+
+```
+TCP Connect taraması hedef: 192.168.1.5
+[OPEN] 22/tcp
+  Banner: SSH-2.0-OpenSSH_7.9p1 Debian-10
+[CLOSED/FILTERED] 80/tcp
+```
+
+## Güvenlik ve Etik
+
+Sadece izniniz olan hedeflerde tarama yapın. LearnMap, çalıştırmadan önce açık onay ister ve kullanıcıya yasal uyarı gösterir.
+
+## Katkı
+
+- Hatalar veya iyileştirme önerileri için pull request veya issue açın.
+
+## Lisans
+
+MIT
