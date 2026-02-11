@@ -45,6 +45,15 @@ TCP Connect taraması hedef: 192.168.1.5
 [CLOSED/FILTERED] 80/tcp
 ```
 
+## Ekran Görüntüleri
+
+Menü ve tarama çıktısı örnekleri:
+
+![Menü örneği](images/screenshot_menu.svg)
+
+![Tarama sonuç örneği](images/screenshot_results.svg)
+
+
 ## Güvenlik ve Etik
 
 Sadece izniniz olan hedeflerde tarama yapın. LearnMap, çalıştırmadan önce açık onay ister ve kullanıcıya yasal uyarı gösterir.
