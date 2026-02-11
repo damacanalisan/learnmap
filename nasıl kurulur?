@@ -7,5 +7,6 @@ python3 learnmap.py yazıyoruz
 artık girmek istediğimizde "cd learnmap" yazıp "python3 learnmap.py" yazmamız yeterli.
 
 eğer powershellde çalıştırmak isterseniz:
+yine github linkini terminale yapıştırıp
 python c:\Users\aliih\Desktop\learnmap\learnmap.py
 yapmanız yeterli
